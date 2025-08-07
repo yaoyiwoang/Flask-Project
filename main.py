@@ -1,12 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-
-@app.route('/')
-@app.route('/index.html')
-def home_page():
-    return 'This is my home page'
+from routes import app
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(debug=True, port=8080) # debug model allows the webpage to be real-time updated
