@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href='/contact'>Contact</a>
+    </nav>
+
+    {% if message %}
+        <div style="color: green; padding: 10px; border: 1px solid green; margin: 10px 0;">
+            {{ message}}
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        <p>
+            <lable for="name">Name:</lable><br>
+            <input type="text" name="name" required>
+        </p>
+        <p>
+            <lable for="email">Email:</lable><br>
+            <input type="email" name="email" required>
+        </p>
+        <p>
+            <lable for="message">Message:</lable><br>
+            <textarea name="message" rows='4' cols='50' required></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Send Message">
+        </p>
+    </form>
+</body>
+</html>
